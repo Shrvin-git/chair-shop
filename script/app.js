@@ -2,10 +2,10 @@ const reter = new Swiper('.swiper', {
 
   loop: true,
 
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 
   breakpoints: {
     750: {
@@ -35,10 +35,10 @@ const swiper = new Swiper('.review-swiper', {
     prevEl: '.swiper-button-prev',
   },
 
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 
   breakpoints: {
     992: {
@@ -55,9 +55,9 @@ const swiper = new Swiper('.review-swiper', {
 
 AOS.init();
 
-// const navToggleIcon = document.querySelector('.btn__toggle')
-// const menu = document.querySelector('.mobile__nav')
-// const navToggleIconClose = document.querySelector(".close__menu")
+const navToggleIcon = document.querySelector('.btn__toggle')
+const menu = document.querySelector('.menu')
+const navToggleIconClose = document.querySelector(".close__menu")
 
 
 // navToggleIconClose.addEventListener("click", function () {
@@ -65,9 +65,11 @@ AOS.init();
 //   menu.classList.remove("menu--open");
 // })
 
+let inputSearch = document.querySelector("#input")
+console.log(inputSearch);
 
-// navToggleIcon.addEventListener('click', function () {
-//   this.classList.toggle('nav__toggle-icon--open');
-//   menu.classList.toggle('menu--open');
-//   menu.classList.remove('menu__close');
-// })
+let searchBtn = document.querySelector(".serach__button");
+
+searchBtn.addEventListener("touchstart", function () {
+  inputSearch.classList.toggle("input")
+})
